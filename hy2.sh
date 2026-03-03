@@ -34,7 +34,7 @@ openssl req -new -x509 \
 
 # 写配置文件
 cat > /etc/hysteria/config.yaml << EOF
-listen: :2786
+listen: :56125
 
 tls:
   cert: /etc/hysteria/server.crt
@@ -75,7 +75,7 @@ service hysteria restart >/dev/null 2>&1
 echo "------------------------------------------------------------"
 echo "hysteria2 安装完成"
 echo ""
-echo "端口: 2786 (UDP)"
+echo "端口: 56125 (UDP)"
 echo "密码: $GENPASS"
 echo "TLS: 开启"
 echo "SNI: bing.com"
